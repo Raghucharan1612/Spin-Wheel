@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Used Cars | SpinWheel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="listing">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="logo" href="index.html">SpinWheel</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links"><a href="cars.html">Buy Cars</a><a href="compare.html">Compare</a><a href="sell.html">Sell Cars</a><a href="loans.html">Car Loan</a></div>
+      <form class="nav-search"><input id="carSearch" type="search" placeholder="Search car name or brand" aria-label="Search cars"></form>
+      <div class="nav-actions"><select aria-label="Select city"><option>All cities</option><option>Bengaluru</option><option>Mumbai</option></select><a class="profile-button" href="login.html">Login</a></div>
+    </nav>
+  </header>
+
+  <main class="page-shell container">
+    <section class="page-intro">
+      <p class="eyebrow">Assured used cars</p>
+      <h1>Find cars that fit your budget and lifestyle</h1>
+      <p>Use filters to narrow down fuel type, transmission, brand, and price.</p>
+    </section>
+
+    <section class="listing-layout">
+      <aside class="filters" aria-label="Car filters">
+        <div class="filter-header"><h2>Filters</h2><button id="clearFilters" type="button">Clear</button></div>
+        <label>Brand<select id="brandFilter"></select></label>
+        <label>Fuel type<select id="fuelFilter"></select></label>
+        <label>Transmission<select id="transmissionFilter"></select></label>
+        <label>Max price<select id="priceFilter">
+          <option value="">Any price</option>
+          <option value="800000">Under ₹8 lakh</option>
+          <option value="1200000">Under ₹12 lakh</option>
+          <option value="1600000">Under ₹16 lakh</option>
+          <option value="2000000">Under ₹20 lakh</option>
+          <option value="2500000">Under ₹25 lakh</option>
+        </select></label>
+      </aside>
+
+      <section class="results">
+        <div class="results-bar">
+          <h2 id="resultCount">Loading cars</h2>
+          <a class="button button--ghost" href="compare.html">Compare cars</a>
+        </div>
+        <div id="carsGrid" class="car-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer compact"><div class="container footer-bottom">SpinWheel demo • <a href="index.html">Home</a> • <a href="sell.html">Sell</a> • <a href="loans.html">Loans</a> • <a href="compare.html">Compare</a></div></footer>
+  <script src="js/cars.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

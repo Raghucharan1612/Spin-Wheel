@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Loans | SpinWheel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="loans">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="logo" href="index.html">SpinWheel</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links"><a href="cars.html">Buy Cars</a><a href="compare.html">Compare</a><a href="sell.html">Sell Cars</a><a href="loans.html">Car Loan</a></div>
+      <form class="nav-search" action="cars.html"><input name="q" type="search" placeholder="Search cars" aria-label="Search cars"></form>
+      <div class="nav-actions"><select aria-label="Select city"><option>Bengaluru</option><option>Delhi NCR</option><option>Mumbai</option></select><a class="profile-button" href="login.html">Login</a></div>
+    </nav>
+  </header>
+
+  <main class="page-shell container">
+    <section class="page-intro centered">
+      <p class="eyebrow">Car loans</p>
+      <h1>Plan a used-car loan before you shortlist</h1>
+      <p>Estimate monthly payments, compare indicative rates, and understand basic eligibility in one place.</p>
+    </section>
+
+    <section class="benefit-grid">
+      <article><h3>Fast approval</h3><p>Static demo flow for quick pre-checks and simple next steps.</p></article>
+      <article><h3>Flexible tenure</h3><p>Choose a tenure range that keeps your monthly payment comfortable.</p></article>
+      <article><h3>Transparent EMI</h3><p>See principal, tenure, and interest changes reflected instantly.</p></article>
+    </section>
+
+    <section class="loan-layout">
+      <article class="info-panel emi-panel">
+        <h2>EMI calculator</h2>
+        <label>Loan amount<input id="loanPageAmount" type="number" value="800000" min="100000" step="10000"></label>
+        <label>Tenure in months<input id="loanPageTenure" type="number" value="48" min="12" max="84"></label>
+        <label>Interest rate %<input id="loanPageRate" type="number" value="9.5" min="6" max="18" step="0.1"></label>
+        <div class="emi-result"><span>Estimated EMI</span><strong id="loanPageEmi"></strong></div>
+      </article>
+
+      <article class="info-panel">
+        <h2>Interest rate cards</h2>
+        <div class="rate-grid">
+          <div><span>Prime</span><strong>8.9%</strong><p>Strong credit profile</p></div>
+          <div><span>Standard</span><strong>10.5%</strong><p>Balanced eligibility</p></div>
+          <div><span>Flexible</span><strong>12.9%</strong><p>Lower down payment</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Eligibility</p>
+        <h2>Basic documents usually required</h2>
+      </div>
+      <div class="eligibility-list">
+        <span>PAN card</span>
+        <span>Address proof</span>
+        <span>Income proof</span>
+        <span>Bank statement</span>
+        <span>Valid driving license</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer compact"><div class="container footer-bottom">SpinWheel demo • <a href="index.html">Home</a> • <a href="cars.html">Buy cars</a> • <a href="sell.html">Sell</a> • <a href="compare.html">Compare</a></div></footer>
+  <script src="js/cars.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

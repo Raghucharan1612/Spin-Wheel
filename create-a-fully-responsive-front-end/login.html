@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SpinWheel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="logo" href="index.html">SpinWheel</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links"><a href="cars.html">Buy Cars</a><a href="compare.html">Compare</a><a href="sell.html">Sell Cars</a><a href="loans.html">Car Loan</a></div>
+      <form class="nav-search" action="cars.html"><input name="q" type="search" placeholder="Search cars" aria-label="Search cars"></form>
+      <div class="nav-actions"><select aria-label="Select city"><option>Bengaluru</option><option>Delhi NCR</option><option>Mumbai</option></select><a class="profile-button" href="login.html">Login</a></div>
+    </nav>
+  </header>
+
+  <main class="auth-shell">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <p class="eyebrow">Welcome back</p>
+      <h1 id="loginTitle">Login to SpinWheel</h1>
+      <form id="loginForm" novalidate>
+        <label>Email<input id="loginEmail" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+        <label>Password
+          <span class="password-field">
+            <input id="loginPassword" type="password" placeholder="Minimum 6 characters" autocomplete="current-password" required>
+            <button id="togglePassword" type="button">Show</button>
+          </span>
+        </label>
+        <button class="button full-width" type="submit">Login</button>
+        <p id="loginMessage" class="form-message" aria-live="polite"></p>
+      </form>
+      <div class="social-login" aria-label="Social login options">
+        <button type="button">G</button>
+        <button type="button">f</button>
+      </div>
+      <p class="signup-text">New here? <a href="sell.html">Create an account</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer compact"><div class="container footer-bottom">SpinWheel demo • <a href="index.html">Home</a> • <a href="cars.html">Buy cars</a> • <a href="sell.html">Sell</a> • <a href="loans.html">Loans</a></div></footer>
+  <script src="js/cars.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

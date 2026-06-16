@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Cars | SpinWheel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="compare">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="logo" href="index.html">SpinWheel</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links"><a href="cars.html">Buy Cars</a><a href="compare.html">Compare</a><a href="sell.html">Sell Cars</a><a href="loans.html">Car Loan</a></div>
+      <form class="nav-search" action="cars.html"><input type="search" placeholder="Search cars" aria-label="Search cars"></form>
+      <div class="nav-actions"><select aria-label="Select city"><option>Bengaluru</option><option>Mumbai</option></select><a class="profile-button" href="login.html">Login</a></div>
+    </nav>
+  </header>
+
+  <main class="page-shell container">
+    <section class="page-intro centered">
+      <p class="eyebrow">Compare cars</p>
+      <h1>Put two shortlisted cars side by side</h1>
+      <p>Choose any two cars from the static inventory and compare price, engine, mileage, and comfort basics.</p>
+    </section>
+
+    <section class="compare-controls">
+      <label>First car<select id="firstCar"></select></label>
+      <label>Second car<select id="secondCar"></select></label>
+    </section>
+
+    <section class="compare-wrap" aria-label="Car comparison table">
+      <table id="compareTable" class="compare-table"></table>
+    </section>
+  </main>
+
+  <footer class="site-footer compact"><div class="container footer-bottom">SpinWheel demo • <a href="index.html">Home</a> • <a href="cars.html">Buy cars</a> • <a href="sell.html">Sell</a> • <a href="loans.html">Loans</a></div></footer>
+  <script src="js/cars.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

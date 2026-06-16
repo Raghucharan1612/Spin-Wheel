@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpinWheel | Assured Used Cars</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="logo" href="index.html">SpinWheel</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="cars.html">Buy Cars</a>
+        <a href="compare.html">Compare</a>
+        <a href="sell.html">Sell Cars</a>
+        <a href="loans.html">Car Loan</a>
+      </div>
+      <form class="nav-search" action="cars.html">
+        <input name="q" type="search" placeholder="Search by car or brand" aria-label="Search cars">
+      </form>
+      <div class="nav-actions">
+        <select aria-label="Select city">
+          <option>Bengaluru</option>
+          <option>Delhi NCR</option>
+          <option>Mumbai</option>
+          <option>Hyderabad</option>
+        </select>
+        <a class="profile-button" href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <p class="eyebrow">Zero-pressure car buying</p>
+        <h1>Find an inspected used car that feels made for you.</h1>
+        <p>Browse verified cars, compare real specifications, and book a test drive from your home.</p>
+        <div class="hero-search">
+          <input type="search" placeholder="Search Hyundai, Honda, SUV..." aria-label="Search cars">
+          <a class="button" href="cars.html">Explore Cars</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-actions container" aria-label="Popular actions">
+      <article id="buy">
+        <span>01</span>
+        <h2>Buy Cars</h2>
+        <p>Handpicked cars with clear pricing and city-wise availability.</p>
+        <a href="cars.html">Start browsing</a>
+      </article>
+      <article id="sell">
+        <span>02</span>
+        <h2>Sell Cars</h2>
+        <p>Get an instant estimate and schedule an inspection at your doorstep.</p>
+        <a href="sell.html">Get price estimate</a>
+      </article>
+      <article id="loan">
+        <span>03</span>
+        <h2>Car Loan</h2>
+        <p>Plan affordable EMIs with simple, transparent calculations.</p>
+        <a href="loans.html">Try EMI planner</a>
+      </article>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Popular brands</p>
+        <h2>Shop by the names buyers trust</h2>
+      </div>
+      <div class="brand-grid">
+        <a href="cars.html">Hyundai</a>
+        <a href="cars.html">Maruti</a>
+        <a href="cars.html">Honda</a>
+        <a href="cars.html">Tata</a>
+        <a href="cars.html">Kia</a>
+        <a href="cars.html">Toyota</a>
+        <a href="cars.html">Mahindra</a>
+        <a href="cars.html">Skoda</a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Featured cars</p>
+          <h2>Fresh picks near you</h2>
+        </div>
+        <a class="text-link" href="cars.html">View all cars</a>
+      </div>
+      <div id="featuredCars" class="car-grid"></div>
+    </section>
+
+    <section class="why-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why choose us</p>
+          <h2>A calmer way to buy used cars</h2>
+        </div>
+        <div class="why-grid">
+          <article><h3>200-point checks</h3><p>Every listed car is inspected for mechanical, electrical, and structural quality.</p></article>
+          <article><h3>Transparent price</h3><p>No hidden fees, surprise add-ons, or confusing negotiations at checkout.</p></article>
+          <article><h3>Doorstep test drives</h3><p>Shortlist confidently and experience the car before you commit.</p></article>
+          <article><h3>Easy paperwork</h3><p>Ownership transfer and support flows are designed to feel straightforward.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Customer stories</p>
+        <h2>People who found their next drive</h2>
+      </div>
+      <div class="testimonial-grid">
+        <blockquote><p>The filters made it easy to compare practical options without calling five dealers.</p><cite>Priya M.</cite></blockquote>
+        <blockquote><p>The pricing felt clear, and the test drive booking was refreshingly simple.</p><cite>Arjun S.</cite></blockquote>
+        <blockquote><p>I shortlisted SUVs in one evening and found a diesel automatic under budget.</p><cite>Neha K.</cite></blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html">SpinWheel</a><p>Static demo inspired by modern used-car marketplaces.</p></div>
+      <div><h3>Explore</h3><a href="cars.html">Buy cars</a><a href="sell.html">Sell cars</a><a href="compare.html">Compare cars</a><a href="loans.html">Car loans</a></div>
+      <div><h3>Company</h3><a href="login.html">Login</a><a href="details.html?id=1">Car details</a><a href="cars.html">Support</a></div>
+      <div><h3>Social</h3><div class="socials"><a href="index.html" aria-label="Facebook">f</a><a href="index.html" aria-label="X">x</a><a href="index.html" aria-label="LinkedIn">in</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/cars.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
