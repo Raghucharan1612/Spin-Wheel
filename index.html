@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-background">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpinWheel — Find Your Dream Car With Confidence</title>
+  <meta name="description" content="SpinWheel is India's premium next-gen used-car marketplace. Verified cars, transparent pricing and a hassle-free experience across 25+ cities.">
+  <meta name="theme-color" content="#06060a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div id="nav-slot"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"><img src="assets/img/hero.png" alt="Luxury car at night"></div>
+    <div class="container container-xl">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="hero-badge eyebrow reveal"><i class="bi bi-patch-check-fill"></i> 200-Point Certified Cars</span>
+          <h1 class="mt-3 reveal d1">Find Your Dream Car <span class="text-grad">With Confidence.</span></h1>
+          <p class="lead mt-3 reveal d2">Verified cars. Transparent pricing. A hassle-free experience built for the way you actually buy.</p>
+          <div class="d-flex gap-3 mt-4 reveal d3 flex-wrap">
+            <a href="cars.html" class="btn btn-glow"><i class="bi bi-search me-1"></i> Browse Cars</a>
+            <a href="sell.html" class="btn btn-ghost">Sell Your Car</a>
+          </div>
+
+          <!-- Animated search -->
+          <div class="glass search-box reveal d4">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label>Brand</label>
+                <select class="form-select" id="hBrand"><option value="">All Brands</option></select>
+              </div>
+              <div class="col-md-4">
+                <label>Budget</label>
+                <select class="form-select" id="hBudget">
+                  <option value="">Any Budget</option>
+                  <option value="800000">Under ₹8 L</option>
+                  <option value="1500000">₹8 L – ₹15 L</option>
+                  <option value="2500000">₹15 L – ₹25 L</option>
+                  <option value="9999999">₹25 L +</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label>Fuel Type</label>
+                <select class="form-select" id="hFuel">
+                  <option value="">Any Fuel</option><option>Petrol</option><option>Diesel</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-glow w-100 mt-3" onclick="heroSearch()"><i class="bi bi-stars me-1"></i> Find My Car</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="row g-3 mt-5">
+        <div class="col-6 col-lg-3"><div class="glass stat-card reveal"><div class="stat-num"><span data-count="5000" data-suffix="+">0</span></div><div class="stat-label">Cars Sold</div></div></div>
+        <div class="col-6 col-lg-3"><div class="glass stat-card reveal d1"><div class="stat-num"><span data-count="25" data-suffix="+">0</span></div><div class="stat-label">Cities</div></div></div>
+        <div class="col-6 col-lg-3"><div class="glass stat-card reveal d2"><div class="stat-num"><span data-count="98" data-suffix="%">0</span></div><div class="stat-label">Satisfaction</div></div></div>
+        <div class="col-6 col-lg-3"><div class="glass stat-card reveal d3"><div class="stat-num"><span data-count="200" data-suffix="-Pt">0</span></div><div class="stat-label">Inspection</div></div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED CARS -->
+  <section class="section" id="featured">
+    <div class="container container-xl">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+        <div class="reveal">
+          <span class="eyebrow">Handpicked</span>
+          <h2 class="section-title">Featured Cars</h2>
+          <p class="section-sub">Premium, fully-inspected cars our buyers love most this week.</p>
+        </div>
+        <a href="cars.html" class="btn btn-ghost reveal">View All <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+      <div class="car-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- AI MATCH + MOOD -->
+  <section class="section-sm">
+    <div class="container container-xl">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5">
+          <div class="glass p-4 h-100 reveal">
+            <span class="eyebrow"><i class="bi bi-cpu"></i> AI Car Match</span>
+            <h3 class="section-title" style="font-size:1.7rem">Your Match Score</h3>
+            <p class="section-sub mb-4">Based on your budget, fuel and lifestyle preferences.</p>
+            <div class="d-flex align-items-center gap-4">
+              <div class="circle-progress" id="matchCircle">
+                <svg width="150" height="150">
+                  <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs>
+                  <circle class="track" cx="75" cy="75" r="64" fill="none" stroke-width="12"/>
+                  <circle class="bar" cx="75" cy="75" r="64" fill="none" stroke-width="12" stroke-dasharray="402" stroke-dashoffset="402"/>
+                </svg>
+                <div class="val">0%</div>
+              </div>
+              <div>
+                <div style="font-weight:700;font-size:1.1rem">Excellent Fit</div>
+                <p style="color:var(--muted);font-size:.88rem;margin:0">We found cars that align with your needs. Set your mood to refine results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="glass p-4 h-100 reveal d2">
+            <span class="eyebrow"><i class="bi bi-emoji-smile"></i> Mood Based</span>
+            <h3 class="section-title" style="font-size:1.7rem">What's the plan?</h3>
+            <p class="section-sub mb-3">Pick a vibe and we'll recommend the right cars.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3" id="moodBtns">
+              ${''}
+            </div>
+            <div class="row g-3" id="moodResult"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="section-sm">
+    <div class="container container-xl">
+      <div class="text-center mb-4 reveal">
+        <span class="eyebrow">Top Brands</span>
+        <h2 class="section-title">Popular Brands</h2>
+      </div>
+      <div class="brand-grid" id="brandGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section">
+    <div class="container container-xl">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">The SpinWheel Promise</span>
+        <h2 class="section-title">Why Choose SpinWheel</h2>
+        <p class="section-sub mx-auto">A premium ownership experience from the very first click.</p>
+      </div>
+      <div class="row g-4" id="whyGrid"></div>
+    </div>
+  </section>
+
+  <!-- RECENTLY VIEWED -->
+  <section class="section-sm" id="recentSection" style="display:none">
+    <div class="container container-xl">
+      <div class="mb-4 reveal">
+        <span class="eyebrow"><i class="bi bi-clock-history"></i> Continue</span>
+        <h2 class="section-title">Recently Viewed</h2>
+      </div>
+      <div class="car-grid" id="recentGrid"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container container-xl">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">Loved by Owners</span>
+        <h2 class="section-title">What Our Buyers Say</h2>
+      </div>
+      <div class="row g-4" id="reviewGrid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-sm">
+    <div class="container container-xl">
+      <div class="row g-4">
+        <div class="col-lg-4 reveal">
+          <span class="eyebrow">Got Questions?</span>
+          <h2 class="section-title">FAQs</h2>
+          <p class="section-sub">Everything you need to know before buying with confidence.</p>
+        </div>
+        <div class="col-lg-8 reveal d1" id="faqList"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+</html>
